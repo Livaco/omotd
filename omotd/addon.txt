@@ -1,11 +1,11 @@
 "AddonInfo"
 {
 	"name"				"Omega MOTD"
-	"version"			"1.0"
-	"up_date"			"05/08/2018"
+	"version"			"1.1"
+	"up_date"			"07/11/2018"
 	"author_name"		"Livaco"
 	"author_email"		"livacobussness@outlook.com"
-	"author_url"		"https://www.gmodstore.com/users/view/76561198121018313"
+	"author_url"		"https://garrysmods.org/profile/76561198121018313"
 	"info"				"MOTD for Garry's Mod."
 	"override"			"0"
 }

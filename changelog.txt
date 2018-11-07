@@ -1,0 +1,8 @@
+Omega MOTD - Version 1.1
+
+Changelog:
+
+- Added language file.
+- Relayed Configuration file.
+- Made more resource efficient way of loading addon.
+- Added bLogs support.
