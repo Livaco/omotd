@@ -59,7 +59,7 @@ OMOTD.Lang.HomeMap = "Map: %s"
 OMOTD.Lang.HomeTime = "Uptime: %s minutes."
 
 -- Join button text for Servers Panel. All other panels are URl's or are set in the config so they don't need lang filing.
-OMOTD.Lang.ServersText = "Nigger"
+OMOTD.Lang.ServersText = "Connect"
 
 -- Steam Profile button text for staff online panel.
 OMOTD.Lang.StaffText = "Steam Profile"
