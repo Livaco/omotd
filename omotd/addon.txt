@@ -1,8 +1,8 @@
 "AddonInfo"
 {
 	"name"				"Omega MOTD"
-	"version"			"1.1"
-	"up_date"			"07/11/2018"
+	"version"			"1.2"
+	"up_date"			"18/01/2019"
 	"author_name"		"Livaco"
 	"author_email"		"livacobussness@outlook.com"
 	"author_url"		"https://garrysmods.org/profile/76561198121018313"

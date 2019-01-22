@@ -9,10 +9,10 @@ If you need any help with this make a support ticket at https://livacoweb.000web
 
 
 -- Name of the server, for the title.
-OMOTD.Config.ServerName = "Cool Server"
+OMOTD.Config.ServerName = "Imagine Networks"
 
 -- Groups that count as a Staff Member. Used for the staff online panel.
-OMOTD.Config.StaffGroups = {"owner", "superadmin", "admin"}
+OMOTD.Config.StaffGroups = {"trial-moderator", "moderator", "admin", "superadmin", "developer", "sr-admin", "operator"}
 
 -- Command to open the MOTD, includes prefix.
 OMOTD.Config.OpenCommand = "!motd"
@@ -29,7 +29,7 @@ OMOTD.Config.bLogs.LogStaffEdit = true
 
 
 -- Text for the announcement at the side.
-OMOTD.Config.AnnouncementText = [[Welcome to our server! Make sure to read the rules and have fun!]]
+OMOTD.Config.AnnouncementText = [[Welcome to Imagine Networks! Please read the rules and have fun!]]
 
 -- The color of the bar at the bottom of the selected panel button.
 OMOTD.Config.SelectedButtonColor = Color(200, 200, 200)
@@ -88,16 +88,16 @@ OMOTD.Config.EnableStaffOnlineButton = true
 
 
 -- Text at the bottom of the home panel.
-OMOTD.Config.HomeText = [[Welcome to our server! Make sure to read the rules and Have Fun! Contact a staff member if you need assistance!]]
+OMOTD.Config.HomeText = [[ ]]
 
 -- Rule Panel Options
 
 
 -- If the rules should open a URL or simply use text.
-OMOTD.Config.UseURLInRules = false
+OMOTD.Config.UseURLInRules = true
 
 -- If the above option is true, what URL does it open.
-OMOTD.Config.RuleURL = "https://www.google.com/"
+OMOTD.Config.RuleURL = "https://imaginenetworks.mistforums.com/thread/rules-477404"
 
 -- If the panel is not using a link, what text should be drawn.
 OMOTD.Config.Rules = [[Rules of our network! Failure to abide by these rules will result in punishment!
@@ -109,25 +109,25 @@ OMOTD.Config.Rules = [[Rules of our network! Failure to abide by these rules wil
 
 
 -- Forum URL.
-OMOTD.Config.ForumURL = "https://www.google.com/"
+OMOTD.Config.ForumURL = "https://imaginenetworks.mistforums.com/forums"
 
 -- Group Panel Options
 
 
 -- Steam Group URL.
-OMOTD.Config.GroupURL = "https://www.google.com/"
+OMOTD.Config.GroupURL = "https://steamcommunity.com/groups/ImaginetworksRP"
 
 -- Workshop Panel Options
 
 
 -- Workshop URL.
-OMOTD.Config.WorkshopURL = "https://www.google.com/"
+OMOTD.Config.WorkshopURL = "https://steamcommunity.com/sharedfiles/filedetails/?id=1547188523"
 
 -- Donate Panel Options
 
 
 -- Donate URL
-OMOTD.Config.DonateURL = "https://www.google.com/"
+OMOTD.Config.DonateURL = "https://imaginenetworks.mistforums.com/donate"
 
 -- Servers Panel Options
 
@@ -168,21 +168,9 @@ I understand this can be hard to understand, take a look at the default three if
 OMOTD.Config.Servers = {
 
   [1] = {
-    name = "Our Sandbox Server",
+    name = "DarkRP",
     ip = "00.000.00.000:00000",
     color = Color(60, 80, 140),
-  },
-
-  [2] = {
-    name = "Our TTT Server",
-    ip = "00.000.00.000:00000",
-    color = Color(0, 80, 70),
-  },
-
-  [3] = {
-    name = "Our MilitaryRP Server",
-    ip = "00.000.00.000:00000",
-    color = Color(150, 200, 60),
   },
 
 }
