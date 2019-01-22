@@ -1,6 +1,25 @@
 util.AddNetworkString("omotd_openmotd")
 util.AddNetworkString("omotd_requestopenmotd")
 
+local function conprint(msg) // Couldn't be assed recreating the function to make it global lol.
+  MsgC(Color(200, 200, 200), "[")
+  MsgC(Color(120, 255, 120), "OMOTD")
+  MsgC(Color(200, 200, 200), "] ")
+  MsgC(Color(200, 200, 200), msg)
+  MsgC(Color(200, 200, 200), "\n")
+end
+local RanCheck = false
+hook.Add("PlayerConnect", "omotd_checkversion", function()
+  if(RanCheck == true) then return end
+  conprint("Running version check!")
+  http.Post("https://livacoweb.000webhostapp.com/libaries/versions/omotd.php", {RunningVar = "1.2"}, function(result)
+    conprint(result)
+  end, function(fail)
+    conprint(fail)
+  end)
+  RanCheck = true
+end)
+
 hook.Add("PlayerSay", "omotd_playersayhook", function(ply, text)
 
   local textnocaps = string.lower(text)
@@ -27,7 +46,6 @@ end)
 -- bLogs
 
 hook.Add("bLogs_FullyLoaded", "omotd_blogsinit", function()
-
   OMOTD.blogs = bLogs:Module()
 
   OMOTD.blogs.Category = "Livaco's Scripts"
@@ -35,7 +53,6 @@ hook.Add("bLogs_FullyLoaded", "omotd_blogsinit", function()
   OMOTD.blogs.Colour   = Color(0, 255, 0, 255)
 
   bLogs:AddModule(OMOTD.blogs)
-
 end)
 
 net.Receive("omotd_requestopenmotd", function(len, ply) -- Had to do it this way because it's this file that stores the staff table.
