@@ -1,4 +1,8 @@
-Changelog - Verison 1.2
+Omega MOTD - Version 1.1
 
-- Added version checking.
-- Fixed issues with bLogs.
+Changelog:
+
+- Added language file.
+- Relayed Configuration file.
+- Made more resource efficient way of loading addon.
+- Added bLogs support.
