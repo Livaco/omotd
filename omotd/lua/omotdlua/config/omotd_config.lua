@@ -161,7 +161,8 @@ Example:
   color = Color(0, 200, 0), -- RGB, displays green.
 },
 
-I understand this can be hard to understand, take a look at the default three if you are struggling. If you still don't understand, make a support ticket on my website and I will assist you.
+I understand this can be hard to understand, take a look at the default three if you are struggling. If you still don't understand, make a support ticket on my website and I will assist you.#
+livaco.tk
 
 */
 
@@ -183,6 +184,12 @@ OMOTD.Config.Servers = {
     name = "Our MilitaryRP Server",
     ip = "00.000.00.000:00000",
     color = Color(150, 200, 60),
+  },
+
+  [4] = {
+    name = "Our StarwarsRP Server",
+    ip = "00.000.00.000:00000",
+    color = Color(200, 0, 0),
   },
 
 }

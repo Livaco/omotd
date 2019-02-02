@@ -354,55 +354,56 @@ net.Receive("omotd_openmotd", function()
     local Staff_Y = 0
 
     for k,v in ipairs(StaffTable) do
+      if(v:IsValid() == true or v:IsPlayer() == true) then
 
-      local StaffPanel = Staff_Scroll:Add("DPanel")
-      StaffPanel:SetSize(Staff_Scroll:GetWide(), Staff_Scroll:GetTall() * 0.15)
-      StaffPanel:SetPos(0, Staff_Y)
-      StaffPanel.Paint = function(s, w, h)
+        local StaffPanel = Staff_Scroll:Add("DPanel")
+        StaffPanel:SetSize(Staff_Scroll:GetWide(), Staff_Scroll:GetTall() * 0.15)
+        StaffPanel:SetPos(0, Staff_Y)
+        StaffPanel.Paint = function(s, w, h)
 
-        draw.RoundedBox(0, 0, 0, w, h, Color(30, 30, 30))
+          draw.RoundedBox(0, 0, 0, w, h, Color(30, 30, 30))
 
-        draw.SimpleText(v:Nick(), "omotd_playerfont", w * 0.12, h / 2.4, Color(255, 255, 255), 0, 1)
-        draw.SimpleText(v:GetUserGroup(), "omotd_buttonfont", w * 0.12, h / 1.6, Color(200, 200, 200), 0, 1)
-
-      end
-
-      local Avatar = vgui.Create("AvatarCircled", StaffPanel)
-      Avatar:SetSize(StaffPanel:GetWide() * 0.09, StaffPanel:GetTall() * 0.9)
-      Avatar:SetPos(StaffPanel:GetWide() * 0.01, StaffPanel:GetTall() * 0.05)
-      Avatar:SetPlayer(v, 255)
-
-      local ProfileButton = vgui.Create("DButton", StaffPanel)
-      ProfileButton:SetSize(StaffPanel:GetWide() * 0.15, StaffPanel:GetTall() * 0.5)
-      ProfileButton:SetPos(StaffPanel:GetWide() * 0.825, StaffPanel:GetTall() * 0.25)
-      ProfileButton:SetText("")
-      local anim = 0
-      ProfileButton.Paint = function(s, w, h)
-
-        if(s:IsHovered()) then
-
-          anim = Lerp(0.05, anim, w)
-
-        else
-
-          anim = Lerp(0.05, anim, 0)
+          draw.SimpleText(v:Nick(), "omotd_playerfont", w * 0.12, h / 2.4, Color(255, 255, 255), 0, 1)
+          draw.SimpleText(v:GetUserGroup(), "omotd_buttonfont", w * 0.12, h / 1.6, Color(200, 200, 200), 0, 1)
 
         end
 
-        draw.RoundedBox(0, 0, 0, w, h, OMOTD.Config.ProfileColor)
-        draw.RoundedBox(0, 0, 0, anim, h, Color(255, 255, 255, 10))
-        draw.SimpleText(OMOTD.Lang.StaffText, "omotd_timefont", w / 2, h / 2, Color(255, 255, 255), 1, 1)
+        local Avatar = vgui.Create("AvatarCircled", StaffPanel)
+        Avatar:SetSize(StaffPanel:GetWide() * 0.09, StaffPanel:GetTall() * 0.9)
+        Avatar:SetPos(StaffPanel:GetWide() * 0.01, StaffPanel:GetTall() * 0.05)
+        Avatar:SetPlayer(v, 255)
 
-      end
+        local ProfileButton = vgui.Create("DButton", StaffPanel)
+        ProfileButton:SetSize(StaffPanel:GetWide() * 0.15, StaffPanel:GetTall() * 0.5)
+        ProfileButton:SetPos(StaffPanel:GetWide() * 0.825, StaffPanel:GetTall() * 0.25)
+        ProfileButton:SetText("")
+        local anim = 0
+        ProfileButton.Paint = function(s, w, h)
 
-      ProfileButton.DoClick = function()
+          if(s:IsHovered()) then
 
-        v:ShowProfile()
+            anim = Lerp(0.05, anim, w)
 
-      end
+          else
 
-      Staff_Y = Staff_Y + (Staff_Scroll:GetTall() * 0.2)
+            anim = Lerp(0.05, anim, 0)
 
+          end
+
+          draw.RoundedBox(0, 0, 0, w, h, OMOTD.Config.ProfileColor)
+          draw.RoundedBox(0, 0, 0, anim, h, Color(255, 255, 255, 10))
+          draw.SimpleText(OMOTD.Lang.StaffText, "omotd_timefont", w / 2, h / 2, Color(255, 255, 255), 1, 1)
+
+        end
+
+        ProfileButton.DoClick = function()
+
+          v:ShowProfile()
+
+        end
+
+        Staff_Y = Staff_Y + (Staff_Scroll:GetTall() * 0.2)
+      end 
     end
 
     local ButtonPanel = vgui.Create("DPanel", frame)

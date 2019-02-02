@@ -1,4 +1,4 @@
-Changelog - Verison 1.2
+OMOTD 1.3 Changelog:
 
-- Added version checking.
-- Fixed issues with bLogs.
+- Fixed a frequent bug that whenever a staff member had just joined, the Staff Online panel would error.
+- Added an example into the config.
